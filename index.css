@@ -1,0 +1,135 @@
+body {
+    background-color: white;
+}
+
+
+/*Arranging title*/
+#title {
+    border: 1px blue solid;
+    width: 100%;
+    text-align: center;
+    font-size: 3.3em;
+    font-family: "Caveat Brush", cursive;
+}
+
+/*Arranging the section together*/
+main{
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: space-between;
+}
+
+.section {
+    border: 1px rgb(56, 223, 56) solid;
+    width: 49%;
+    height: 90vh;
+    font-family: "Caveat Brush", cursive;
+}
+
+
+.section-title-box {
+    font-size: 1.5em;
+    text-align: center;
+    border: 1px rgba(255, 217, 0, 0.669) solid;
+    width: 70%;
+    height: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 2%;
+}
+
+.score-box {
+    font-size: 1.2em;
+    text-align: center;
+    border: 1px solid lightblue;
+    width: 50%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 2%;
+}
+
+.buttons{
+    margin: auto;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2;
+}
+
+#new-round-button{
+    border: 1px solid purple;
+}
+
+#new-round-button button{
+    width: 10%;
+}
+
+#restart-game-button {
+    border: 1px solid purple;
+}
+
+#restart-game-button button {
+    width: 12%;
+}
+
+.options {
+    width: 300px;
+    height: 300px;
+    border: darkblue solid 1px;
+    margin-left: 24.3%;
+    margin-top: 3%;
+    background-color: white;
+}
+
+img[src*='paper'] {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+}
+
+img[src*='rock'] {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+}
+
+img[src*='scissors'] {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+}
+
+#user-rock{
+    display: none;;
+}
+
+#user-paper{
+    display: none;
+}
+
+#user-scissors{
+    display: none;
+}
+
+#comp-rock{
+    display: none;
+}
+
+#comp-paper{
+    display: none;
+}
+
+#comp-scissors{
+    display: none;
+}

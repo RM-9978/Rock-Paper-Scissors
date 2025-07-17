@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Rock, Paper, Scissors</title>
+    <link href="index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="title">Rock Paper Scissors</h1>
+    <main>
+
+        <section class="section" id="user-section">
+                <div class="section-title-box">
+                    <h2>User</h2>
+                </div>
+
+                <div class="score-box">
+                    <h3>Score: <span id="user-score">0</span></h3>
+                </div>
+
+                <div class=options id="user-options">
+                    <img id="user-rock" src="rock.png">
+                    <img id="user-paper" src="paper.png">
+                    <img id="user-scissors" src="scissors.png">
+                </div>
+
+        </section>
+
+
+        <section class="section" id="comp-section">
+
+                <div class="section-title-box">
+                    <h2>Computer</h2>
+                </div>
+
+                <div class="score-box">
+                    <h3>Score: <span id="comp-score">0</span></h3>
+                </div>
+
+                <div class="options" id="comp-options">
+                    <img id="comp-rock" src="rock.png">
+                    <img id="comp-paper" src="paper.png">
+                    <img id="comp-scissors" src="scissors.png">
+                </div>
+
+        </section>
+
+
+    </main>
+
+    <div class="buttons" id="new-round-button">
+        <button><h5>New Round</h5></button>
+    </div>
+
+    <div class="buttons" id="restart-game-button">
+        <button><h5>Restart Game</h5></button>
+    </div>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
