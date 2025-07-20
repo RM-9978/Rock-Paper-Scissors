@@ -1,3 +1,25 @@
+//Getting user choice
+//Getting the radio buttons + value
+
+//get this function checked later
+document.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('user-picked');
+
+    radioButtons.forEach(radioButton => {
+        let userChose;
+        radioButton.addEventListener('change', function() {
+            if (this.checked) { // Check if the current radio button is the one selected
+              userChose = this.value;
+            }
+        });
+    });
+
+    return userChose;
+});
+
+//updating the image
+
+//getting computer choice
 //Function that generates random number (0, 1, 2)
 
 const getRandom = () => {
@@ -41,3 +63,4 @@ const getComputerChoiceImage = (computerChoice) => {
     }
 }
 
+//Determining winner
