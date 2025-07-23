@@ -86,7 +86,7 @@ const determineWinner = (userValue, computerValue) => {
     } else if (userValue === 'paper' && computerValue === 'scissors') {
         return 'computerWins';
     } else if (userValue === 'scissors' && computerValue === 'rock') {
-        return 'userWins';
+        return 'ComputerWins';
     } else if (userValue == 'rock' && computerValue == 'paper') {
         return 'computerWins';
     } else if (userValue === 'paper' && computerValue === 'rock') {
@@ -120,7 +120,7 @@ const displayingImage = (winnerIs) => {
         userWins.style.display = 'none';
         computerWins.style.display = 'none';
         tie.style.display = 'none';
-  }, 5000);
+  }, 7000);
 }
 
 
@@ -129,6 +129,7 @@ const displayingImage = (winnerIs) => {
 const runGame = () => {
 
     try {
+        document.getElementById('user-choice-form').style.display = 'none';
         const userValue = checkRadioButton();
         let random = getRandom();
         let computerValue = getComputerChoice(random);
@@ -137,15 +138,23 @@ const runGame = () => {
 
         setTimeout(function() {
             getComputerChoiceImage(computerValue);
-    }, 3000);
+    }, 2000);
 
         setTimeout(function() {
             const winnerIs = determineWinner(userValue, computerValue);
             displayingImage(winnerIs);
-    }, 5000);
+    }, 4000);
         } catch (error) {
             console.log(error.message)
         }
 
 
 }
+
+//from AI 
+window.addEventListener('DOMContentLoaded', () => {
+    const radioButtons = document.getElementsByName('user-picked');
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', runGame);
+    });
+});

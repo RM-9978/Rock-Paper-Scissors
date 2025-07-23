@@ -156,6 +156,7 @@ img[src*='scissors'] {
     position: absolute;
     height: 10vh;
     width: 100%;
+    z-index: 6;
 }
 
 #user-won {
@@ -185,4 +186,21 @@ fieldset {
 
 legend {
     font-size: 1.5em;
+}
+
+#user-rock,
+#user-paper,
+#user-scissors,
+#comp-rock,
+#comp-paper,
+#comp-scissors {
+    display: none;
+    position: absolute;
+    z-index: 5; /* Only matters when visible */
+    pointer-events: none; /* So they don't block anything */
+}
+
+#user-choice-form {
+    position: relative;
+    z-index: 10;
 }
