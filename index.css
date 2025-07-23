@@ -163,6 +163,10 @@ img[src*='scissors'] {
     display: none;
 }
 
+#tie {
+    display: none;
+}
+
 /*form*/
 fieldset {
     border: 1px, greenyellow, solid;
