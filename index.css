@@ -111,15 +111,18 @@ img[src*='scissors'] {
 }
 
 #user-rock{
-    display: none;;
+    display: none;
+    z-index: 4;
 }
 
 #user-paper{
     display: none;
+    z-index: 3;
 }
 
 #user-scissors{
     display: none;
+    z-index: 5;
 }
 
 #comp-rock{
@@ -131,7 +134,7 @@ img[src*='scissors'] {
 }
 
 #comp-scissors{
-    display: block;
+    display: none;
 }
 
 /*winner loser tgs*/
@@ -177,6 +180,7 @@ fieldset {
     flex-direction: column;
     gap: 5px;
     font-size: 1.2em;
+    z-index: 0;
 }
 
 legend {
