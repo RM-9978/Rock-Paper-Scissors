@@ -1,15 +1,16 @@
 body {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 
 /*Arranging title*/
 #title {
-    border: 1px blue solid;
     width: 100%;
     text-align: center;
     font-size: 3.3em;
     font-family: "Caveat Brush", cursive;
+    color: rgb(12, 28, 82);
+     text-shadow: 2px 2px #ccc;
 }
 
 /*Arranging the section together*/
@@ -21,17 +22,18 @@ main{
 }
 
 .section {
-    border: 1px rgb(56, 223, 56) solid;
-    width: 49%;
+    width: 45%;
     height: 90vh;
     font-family: "Caveat Brush", cursive;
+    border: 1px solid rgb(84, 93, 146);
+    box-shadow: 2px 2px 2px rgb(84, 93, 146), -2px -2px 2px rgb(84, 93, 146);
 }
-
 
 .section-title-box {
     font-size: 1.5em;
+    color: rgb(12, 28, 82);
+    text-shadow: 2px 2px #ccc;
     text-align: center;
-    border: 1px rgba(255, 217, 0, 0.669) solid;
     width: 70%;
     height: 12%;
     margin-left: auto;
@@ -46,8 +48,9 @@ main{
 .score-box {
     font-size: 1.2em;
     text-align: center;
-    border: 1px solid lightblue;
-    width: 50%;
+    color: rgb(12, 28, 82);
+    text-shadow: 1px 1px #ccc;
+    width: 30%;
     height: 10%;
     margin-left: auto;
     margin-right: auto;
@@ -60,7 +63,6 @@ main{
 
 .buttons{
     margin: auto;
-    border: 1px solid grey;
     display: flex;
     justify-content: center;
     margin-top: 2%;
@@ -68,25 +70,30 @@ main{
 }
 
 #new-round-button{
-    border: 1px solid purple;
+    width: 10%;
+    height: 4em;
+    font-family: 'Poppins';
+    color: white;
+    background-color: rgb(106, 92, 199);
+    box-shadow: 2px 2px 2px rgb(84, 93, 146);
+    border: solid 2px rgb(22, 37, 72);
 }
 
-#new-round-button button{
-    width: 10%;
-}
 
 #restart-game-button {
-    border: 1px solid purple;
+    width: 12%;
+    height: 4em;
+    font-family: 'Poppins';
+    color: white;
+    background-color: rgb(106, 92, 199);
+    box-shadow: 4px 4px 2px rgb(170, 176, 210);
+    border: solid 2px rgb(22, 37, 72);
 }
 
-#restart-game-button button {
-    width: 12%;
-}
 
 .options {
     width: 300px;
     height: 300px;
-    border: darkblue solid 1px;
     margin-left: 24.3%;
     margin-top: 3%;
     background-color: white;
@@ -157,6 +164,7 @@ img[src*='scissors'] {
     height: 10vh;
     width: 100%;
     z-index: 6;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 #user-won {
@@ -173,7 +181,7 @@ img[src*='scissors'] {
 
 /*form*/
 fieldset {
-    border: 1px, greenyellow, solid;
+    border: 1px, rgb(72, 90, 194), solid;
     height: 50%;
     width: 80%;
     margin: auto;
@@ -182,10 +190,12 @@ fieldset {
     gap: 5px;
     font-size: 1.2em;
     z-index: 0;
+    color:rgb(12, 28, 82)
 }
 
 legend {
     font-size: 1.5em;
+    color: rgb(12, 28, 82);
 }
 
 #user-rock,
@@ -203,4 +213,13 @@ legend {
 #user-choice-form {
     position: relative;
     z-index: 10;
+}
+.winner-tag {
+    pointer-events: none; /* Add this */
+}
+
+#new-round-button:hover,
+#restart-game-button:hover {
+    background-color: rgb(85, 72, 160);
+    cursor: pointer;
 }

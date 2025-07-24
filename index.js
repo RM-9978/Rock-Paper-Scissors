@@ -86,13 +86,13 @@ const determineWinner = (userValue, computerValue) => {
     } else if (userValue === 'paper' && computerValue === 'scissors') {
         return 'computerWins';
     } else if (userValue === 'scissors' && computerValue === 'rock') {
-        return 'ComputerWins';
+        return 'computerWins';
     } else if (userValue == 'rock' && computerValue == 'paper') {
         return 'computerWins';
     } else if (userValue === 'paper' && computerValue === 'rock') {
         return 'userWins';
-    } else if (userValue === 'scissors' && computerValue === 'rock') {
-        return 'computerWins';
+    } else if (userValue === 'scissors' && computerValue === 'paper') {
+        return 'userWins';
     }
 }
 
@@ -143,6 +143,7 @@ const runGame = () => {
         setTimeout(function() {
             const winnerIs = determineWinner(userValue, computerValue);
             displayingImage(winnerIs);
+            scoreUpdation(winnerIs);
     }, 4000);
         } catch (error) {
             console.log(error.message)
@@ -158,3 +159,7 @@ window.addEventListener('DOMContentLoaded', () => {
         radio.addEventListener('change', runGame);
     });
 });
+
+window.onbeforeunload = function() {
+    return "Please note, if you leave, your game will not be saved.";
+};
